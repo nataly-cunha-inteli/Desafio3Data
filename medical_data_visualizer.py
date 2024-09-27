@@ -26,7 +26,7 @@ def draw_cat_plot():
     df_cat = df_cat.rename(columns={'size': 'total'})
 
     # Plotagem do gráfico
-    fig = sns.catplot(x='variable', y='total', hue='value', col='cardio', data=df_cat, kind='bar').fig
+    fig = sns.catplot(x='variable', y='total', hue='value', col='cardio', data=df_cat, kind='bar').figure
 
     # Save the figure
     fig.savefig('catplot.png')
@@ -58,9 +58,10 @@ def draw_heat_map():
     return fig
 
 
-
+# Função que chama todas as outraas
 def main():
     draw_cat_plot()
     draw_heat_map()
 
+#Chamada da função
 main()
